@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9xr-Ku-cLv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Prompt-Bold.ttf">
+            <string>Prompt-Bold</string>
+        </array>
+        <array key="Prompt-Regular.ttf">
+            <string>Prompt-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9ON-ZM-JGs">
+            <objects>
+                <navigationController id="9xr-Ku-cLv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qIh-zn-OpJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XaH-bP-XWD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUk-Zs-aSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097" y="23"/>
+        </scene>
+        <!--HOME-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-nc-eN7">
+                                <rect key="frame" x="113" y="113" width="189" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Prompt-Regular" family="Prompt" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gim-Bz-9BM">
+                                <rect key="frame" x="113" y="178.5" width="189" height="34"/>
+                                <fontDescription key="fontDescription" name="Prompt-Regular" family="Prompt" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvr-7r-HPA">
+                                <rect key="frame" x="133" y="252.5" width="149" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="cFG-Iu-IpR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="89s-pP-0Zy"/>
+                                    <segue destination="GuH-uJ-raI" kind="show" identifier="secondViewController" id="WRe-xh-yMx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66594183444976807" green="0.92900139093399048" blue="0.684886634349823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zvr-7r-HPA" secondAttribute="trailing" constant="132" id="01D-pK-fpD"/>
+                            <constraint firstItem="CSp-nc-eN7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="5oY-S3-lbD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CSp-nc-eN7" secondAttribute="trailing" constant="112" id="CGt-yK-Le3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gim-Bz-9BM" secondAttribute="trailing" constant="112" id="GP4-l0-0mj"/>
+                            <constraint firstItem="gim-Bz-9BM" firstAttribute="top" secondItem="CSp-nc-eN7" secondAttribute="bottom" constant="30" id="YOU-LH-Yma"/>
+                            <constraint firstItem="gim-Bz-9BM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="ZQp-OB-54p"/>
+                            <constraint firstItem="zvr-7r-HPA" firstAttribute="top" secondItem="gim-Bz-9BM" secondAttribute="bottom" constant="40" id="n6T-h3-HMA"/>
+                            <constraint firstItem="CSp-nc-eN7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="q99-gR-2hG"/>
+                            <constraint firstItem="zvr-7r-HPA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="urG-3Y-MDu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HOME" id="pPi-gY-Ed2"/>
+                    <connections>
+                        <outlet property="loginButton" destination="zvr-7r-HPA" id="w9m-Mg-3rW"/>
+                        <outlet property="passwordTextField" destination="gim-Bz-9BM" id="gK5-5I-yyV"/>
+                        <outlet property="usernameTextField" destination="CSp-nc-eN7" id="v8T-Ld-Rdd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368.11594202898556" y="22.767857142857142"/>
+        </scene>
+        <!--Images-->
+        <scene sceneID="14U-v4-vi1">
+            <objects>
+                <viewController id="GuH-uJ-raI" customClass="ViewController2" customModule="Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xMb-YS-bUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tajmahal" translatesAutoresizingMaskIntoConstraints="NO" id="Weg-9a-i6m">
+                                <rect key="frame" x="62" y="111" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Christ" translatesAutoresizingMaskIntoConstraints="NO" id="urp-Sf-DyY">
+                                <rect key="frame" x="242" y="111" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Colosseum" translatesAutoresizingMaskIntoConstraints="NO" id="RCx-QW-JR5">
+                                <rect key="frame" x="62" y="265" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petra" translatesAutoresizingMaskIntoConstraints="NO" id="RiW-9K-HSW">
+                                <rect key="frame" x="242" y="265" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUx-ij-D4C">
+                                <rect key="frame" x="67" y="218" width="90" height="38"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Tajmahal">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7cV-pU-XW1" kind="show" identifier="tajmahal" id="xmW-CI-Y2l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaB-sr-IhX">
+                                <rect key="frame" x="247" y="217" width="90" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Christ">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7cV-pU-XW1" kind="show" identifier="christ" id="Ktk-60-gZJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ec9-bs-6nf">
+                                <rect key="frame" x="67" y="375" width="90" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Colosseum">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7cV-pU-XW1" kind="show" identifier="collosseum" id="4yj-uX-dsR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djL-F3-upD">
+                                <rect key="frame" x="247" y="373" width="90" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Petra">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7cV-pU-XW1" kind="show" identifier="petra" id="h2p-r0-9tI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93443089723587036" green="0.69055616855621338" blue="0.75339418649673462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Weg-9a-i6m" firstAttribute="leading" secondItem="eVs-M1-EHj" secondAttribute="leading" constant="62" id="9Nl-AC-bIA"/>
+                            <constraint firstItem="Weg-9a-i6m" firstAttribute="top" secondItem="eVs-M1-EHj" secondAttribute="top" constant="23" id="NnY-7m-0YR"/>
+                            <constraint firstItem="GUx-ij-D4C" firstAttribute="top" secondItem="Weg-9a-i6m" secondAttribute="bottom" constant="7" id="caZ-hF-5Gr"/>
+                            <constraint firstItem="GUx-ij-D4C" firstAttribute="leading" secondItem="eVs-M1-EHj" secondAttribute="leading" constant="67" id="qoQ-dG-k5b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eVs-M1-EHj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Images" id="p6C-hH-tc4"/>
+                    <connections>
+                        <outlet property="christButton" destination="LaB-sr-IhX" id="jQn-zr-aOs"/>
+                        <outlet property="collesseumButton" destination="ec9-bs-6nf" id="Zya-ZJ-GKD"/>
+                        <outlet property="petraButton" destination="djL-F3-upD" id="PLu-Ok-jOS"/>
+                        <outlet property="tajmahalButton" destination="GUx-ij-D4C" id="m41-bD-ntU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aep-Ls-ng5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334.78260869565219" y="22.767857142857142"/>
+        </scene>
+        <!--Details Page-->
+        <scene sceneID="26k-b6-UQM">
+            <objects>
+                <viewController id="7cV-pU-XW1" customClass="ViewController3" customModule="Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f8X-XD-drk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Petra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnd-QS-mVF">
+                                <rect key="frame" x="127" y="271" width="160" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aX-1E-hke">
+                                <rect key="frame" x="127" y="320" width="160" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Return Home">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToViewController:" destination="7cV-pU-XW1" eventType="touchUpInside" id="49V-tT-n8b"/>
+                                    <segue destination="TXH-bt-X2x" kind="unwind" unwindAction="unwindToOneWith_sender:" id="0KT-4L-0Yg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petra" translatesAutoresizingMaskIntoConstraints="NO" id="Aup-FM-I2z">
+                                <rect key="frame" x="87" y="116" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bQr-nZ-XFP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details Page" id="sOo-gu-O8k"/>
+                    <connections>
+                        <outlet property="backButton" destination="0aX-1E-hke" id="yeS-v3-33w"/>
+                        <outlet property="expandedImage" destination="Aup-FM-I2z" id="Yaf-tu-eqh"/>
+                        <outlet property="imageLabel" destination="rnd-QS-mVF" id="22c-sg-bcO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AQ-Ls-vWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="TXH-bt-X2x" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1073.913043478261" y="22.767857142857142"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ktk-60-gZJ"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Christ" width="2144" height="1424"/>
+        <image name="Colosseum" width="800" height="548"/>
+        <image name="petra" width="1024" height="683"/>
+        <image name="tajmahal" width="640" height="424.5"/>
+    </resources>
+</document>
